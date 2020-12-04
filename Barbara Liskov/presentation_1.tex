@@ -115,28 +115,17 @@ Barbara Liskov was awarded the Alan Turing award for  contributions "of lasting 
 
 \vspace{5mm} %5mm vertical space
 
-Her award was for contributions to practical and theoretical foundations of programming language and system design, especially related to data abstraction, fault tolerance, and distributed computing. 
+Awarded for contributions to practical and theoretical foundations of programming language and system design, especially related to data abstraction, fault tolerance, and distributed computing. 
 
 \vspace{5mm}
 
-She developed a new notion of sub typing known as the Liskov Substitution principle.
-
-\vspace{5mm} %5mm vertical space
-
-At a high level, the LSP states that in an object-oriented program, if we substitute a superclass object reference with an object of any of its subclasses, the program should not break.\\
-
-\vspace{1mm}
-
-\href{https://reflectoring.io/lsp-explained/}{click reflectoring website}
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
 \frametitle{Contributions}
-
 \begin{itemize}
-
 \item Venus \& variable scope
 \item CLU Programming Language
 \item Data Abstraction
@@ -144,12 +133,63 @@ At a high level, the LSP states that in an object-oriented program, if we substi
 \end{itemize}
 \end{frame}
 %------------------------------------------------
+\begin{frame}
+\frametitle{Venus \& Variable Scope}
+Created the “Venus Computer” tailored to supporting the construction of complex software. The Venus operating system was a small time sharing system for the Venus machine used to experiment with how different architectures helped or hindered this process.
 
+\vspace{5mm}
+
+The Venus Operating System is an experimental multiprogramming system which supports five or six concurrent users on a small computer. The system is defined by a combination of microprograms and software.
+
+\vspace{5mm}
+
+Variable scope
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}
+\frametitle{Data Abstraction}
+What we desire from an abstraction is a mechanism which permits the expression of relevant details and the suppression of irrelevant details. In the case of programming, the use which may be made of an abstraction is relevant; the way in which the abstraction is implemented is irrelevant. — Programming With Abstract Data Types - B.Liskov 1974
+
+This work resulted in CLU a programming language which is a predecessor to many OOP languages.
+\vspace{5mm}
+
+Her contributions have influenced advanced system developments and set a standard for clarity and usefulness
+
+\end{frame}
+%------------------------------------------------
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{CLU Programming Language}
+
+At MIT she led the design and implementation of the CLU programming language, which emphasized the notions of modular programming, data abstraction, and polymorphism. These concepts are a foundation of object-oriented programming used in modern computer languages such as Java and C\#.
+
+\vspace{5mm}
+
+CLU introduced many features that are used widely now, and is seen as a step in the development of object-oriented programming 
+
+\vspace{5mm}
+
+also notable for its use of classes with constructors and methods, but without inheritance.
+
+\end{frame}
 %------------------------------------------------
 
 \begin{frame}
 \frametitle{Barbara Liskov's definition}
+
+Developed a new notion of sub typing now known as the Liskov Substitution principle.
+
+\vspace{5mm} %5mm vertical space
+
+At a high level, the LSP states that in an object-oriented program, if we substitute a superclass object reference with an object of any of its subclasses, the program should not break.\\
+
+\vspace{5 mm}
+
 "If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T"
+
+
 \end{frame}
 
 
@@ -235,6 +275,27 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 \end{frame}
 
 %------------------------------------------------
+\begin{frame}{Conclusion}
+\begin{itemize}
+\item Subsequent work has mainly been in the area of distributed systems. 
+\item Her research has covered many aspects of OS and computation \begin{itemize}
+    \item work on object-oriented database systems
+    \item  garbage collection
+    \item caching, persistence, recovery, 
+    \item security, decentralized information flow
+    \item modular upgrading of distributed systems, geographic routing
+    \item fault tolerance and practical Byzantine fault tolerance
+\end{itemize}  
+\item Many of these, deal with situations where a complex system fails in arbitrary ways. 
+\item Liskov developed methods to allow correct operation even when some components are unreliable.
+\item At 81, Barbara Liskov is still active today contributing to and writing many papers as recently as this year.  
+
+\end{itemize}
+\end{frame}
+
+
+
+%------------------------------------------------
 
 \begin{frame}
 \Huge{\centerline{The End}}
@@ -253,6 +314,12 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 
 
 \item \href{https://dev.to/erikwhiting88/liskov-substitution-principle-in-3-minutes-2}{DEV; Liskov Substitution Principle in 3 Minutes;}
+\item \href {https://dl.acm.org/doi/abs/10.1145/155360.155367}{A history of CLU Barbara Liskov (1992)}
+\item \href{https://dblp.uni-trier.de/pid/l/BarbaraLiskov.html}{Barbara Liskov Index of publications}
+
+\item \href{http://www.pmg.csail.mit.edu/~liskov/newcv-09.pdf}{Barbara Liskov CV}
+
+\item \href{http://www.pmg.csail.mit.edu/~liskov/}{Barbara Liskov home page}
 
 \end{itemize}
 \end{frame}
