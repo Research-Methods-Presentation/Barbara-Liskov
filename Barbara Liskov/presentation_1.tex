@@ -145,11 +145,11 @@ Award for contributions to practical and theoretical foundations of programming 
 %------------------------------------------------
 \begin{frame}
 \frametitle{Data Abstraction}
-Because  systems  of  any  size  can  al-ways  be  expected  to  be  subject  to  changes  in  require-ments,  the  project  goal  is  to  produce  not  only  reliable  software,  but  readable  software  which  is relatively  easy  to  modify  and  maintain[1].
+Because  systems  of  any  size  can  always  be  expected  to  be  subject  to  changes  in  requirements,  the  project  goal  is  to  produce  not  only  reliable  software,  but  readable  software  which  is relatively  easy  to  modify  and  maintain[5].
 
 \vspace{5mm}
 
-What we desire from an abstraction is a mechanism which permits the expression of relevant details and the suppression of irrelevant details. In the case of programming, the use which may be made of an abstraction is relevant; the way in which the abstraction is implemented is irrelevant[2]. 
+What we desire from an abstraction is a mechanism which permits the expression of relevant details and the suppression of irrelevant details. In the case of programming, the use which may be made of an abstraction is relevant; the way in which the abstraction is implemented is irrelevant[6]. 
 
 \vspace{5mm}
 
@@ -170,11 +170,7 @@ At MIT she led the design and implementation of the CLU programming language, wh
 
 \vspace{5mm}
 
-CLU introduced many features that are used widely now, and is seen as a step in the development of object-oriented programming 
-
-\vspace{5mm}
-
-also notable for its use of classes with constructors and methods, but without inheritance.
+CLU introduced many features that are used widely now, and is seen as a step in the development of object-oriented programming and was also notable for its use of classes with constructors and methods, but without inheritance [1].
 
 \end{frame}
 %------------------------------------------------
@@ -193,7 +189,7 @@ Developed a new notion of sub typing now known as the Liskov Substitution princi
 
 \vspace{5mm} %5mm vertical space
 
-At a high level, the LSP states that in an object-oriented program, if we substitute a superclass object reference with an object of any of its subclasses, the program should not break.\\
+At a high level, the LSP states that in an object-oriented program, if we substitute a superclass object reference with an object of any of its subclasses, the program should not break [2].\\
 
 \vspace{5 mm}
 
@@ -210,7 +206,7 @@ At a high level, the LSP states that in an object-oriented program, if we substi
 
 % Putting code on screen & formatted nicely
 \begin{lstlisting}[language=Java]
-
+[3]
 // Animal super class 
 public static class Animal {
   public String favoriteFood;
@@ -240,7 +236,7 @@ public static class Cat extends Animal {
 %------------------------------------------------
 
 \vspace{5mm}
-
+[3]
 % Putting code on screen & formatted nicely
 \begin{lstlisting}[language=Java]
 // Method to give treats
@@ -258,8 +254,6 @@ public static void main(String[] args) {
   GiveTreatTo(rover);
   GiveTreatTo(bingo);
 }
-
-
 Command prompt output:
 
 You gave the Dog some bacon
@@ -270,7 +264,6 @@ You gave the Cat some fish
 
 \begin{frame}
 \frametitle{SOLID} 
-
 \includegraphics[scale=0.8]{SOLID}
 \centering
 
@@ -287,11 +280,11 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 %------------------------------------------------
 \begin{frame}{Distributed Systems}
 In the 1980’s remote file systems came into existence. Worked on an algorithm that handled benign failures or crash failures.
- Designed a replication technique with Brian Oki[3].
+ Designed a replication technique with Brian Oki[7].
  
  \vspace{2mm}
  
- One of the potential benefits of distributed systems is their use in providing highly-available services, that is, services that are likely to be up and accessible when needed. Availability is essential to many computer-based services; for example, in airline reservation systems the failure of a single computer can prevent ticket sales for a considerable time, causing a loss of revenue and passenger goodwill. Availability is achieved through replication. By having more than one copy of important information, the service continues to be usable even when some copies are inaccessible, for example, because of a crash of the computer where a copy was stored[3].
+ One of the potential benefits of distributed systems is their use in providing highly-available services, that is, services that are likely to be up and accessible when needed. Availability is essential to many computer-based services; for example, in airline reservation systems the failure of a single computer can prevent ticket sales for a considerable time, causing a loss of revenue and passenger goodwill. Availability is achieved through replication. By having more than one copy of important information, the service continues to be usable even when some copies are inaccessible, for example, because of a crash of the computer where a copy was stored[7].
 
 
     
@@ -299,16 +292,26 @@ In the 1980’s remote file systems came into existence. Worked on an algorithm 
 %------------------------------------------------
 %------------------------------------------------
 \begin{frame}{Practical Byzantine Fault Tolerance}
-In the 1990's came up with a new replication algorithm that  is able to tolerate Byzantine faults with Miguel Castro[4].
+In the 1990's came up with a new replication algorithm that  is able to tolerate Byzantine faults with Miguel Castro[8].
 
 \vspace{2mm}
 
 pBFT consensus rounds are called views and are broken into 4 phases:
 
+    \vspace{3mm}
+    
    1. A client sends a request to the leader node to invoke a service operation.
+   \newline
+   
    2. The leading node broadcasts the request to the backup nodes.
+   \newline
+  
     3.The nodes execute the request, then send a reply to the client.
-   4. The client awaits f+1 replies from different nodes with the same result, where f represents the maximum number of potentially faulty nodes[5].
+    \newline
+    
+   4. The client awaits f+1 replies from different nodes with the same result, where f represents the maximum number of potentially faulty nodes[9].
+   
+   \vspace{1mm}
 
 \end{frame}
 %------------------------------------------------
@@ -344,47 +347,67 @@ pBFT consensus rounds are called views and are broken into 4 phases:
 %-----------------------------------------------------------------
 \begin{frame}{References}
 
-[1] {A  design  methodology  for  reliable  software   systems, Barbara Liskov, 1972} https://ckrybus.com/static/papers/liskov1972.pdf 
+[1] {CLU (programming language)} https://en.wikipedia.org/wiki/CLU_(programming_language)
+
+[2] {The Liskov Substitution Principle Explained} https://reflectoring.io/lsp-explained/
 
 \vspace{1mm}
 
-[2] {Programming With Abstract Data Types - B.Liskov 1974}
+[3] {Liskov Substitution Principle in 3 Minutes}
+https://dev.to/erikwhiting88/liskov-substitution-principle-in-3-minutes-2dc6
+
+\vspace{1mm}
+
+[4] {SOLID Principle in Programming: Understand With Real Life Examples}
+
+https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/#:~:text=Liskov's%20Substitution%20Principle%3A%20The%20principle,their%20base%20or%20parent%20classes%E2%80%9C.&text=So%20we%20can%20say%20that,rectangle%20class%20into%20square%20class.
+
+\end{frame}
+
+%-----------------------------------------------------------------
+\begin{frame}{References}
+
+[5] {A  design  methodology  for  reliable  software   systems, Barbara Liskov, 1972} https://ckrybus.com/static/papers/liskov1972.pdf 
+
+\vspace{1mm}
+
+[6] {Programming With Abstract Data Types - B.Liskov 1974}
 http://web.cs.iastate.edu/~hridesh/teaching/362/07/01/papers/p50-liskov.pdf
 
 \vspace{1mm}
 
-[3] {Viewstamped Replication: A New Primary Copy Method to Support Highly-Available Distributed Systems B. Liskov, B.Oki 1988}
+[7] {Viewstamped Replication: A New Primary Copy Method to Support Highly-Available Distributed Systems B. Liskov, B.Oki 1988}
 http://pmg.csail.mit.edu/papers/vr.pdf
 
 \vspace{1mm}
 
-[4] {PracticalByzantineFaultTolerance M.Castro, B. Liskov 1999} http://pmg.csail.mit.edu/papers/osdi99.pdf
+[8] {PracticalByzantineFaultTolerance M.Castro, B. Liskov 1999} http://pmg.csail.mit.edu/papers/osdi99.pdf
 
 \vspace{1mm}
 
-[5] https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/
+[9] https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/
+
 
 \end{frame}
+
+
 %-----------------------------------------------------------------
+
 
 \begin{frame}
 \frametitle{Clickable References}
 \begin{itemize}
 \item \href{https://amturing.acm.org/award_winners/liskov_1108679.cfm}{ A.M. Turing; Barbara Liskov;} 
 
-\item \href{https://reflectoring.io/lsp-explained/}{ Reflectoring; The Liskov Substitution Principle Explained;}
-
-\item \href{https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-e}{GeeksforGeeks; SOLID Principle in Programming: Understand With Real Life Examples;}
-
-
-\item \href{https://dev.to/erikwhiting88/liskov-substitution-principle-in-3-minutes-2}{DEV; Liskov Substitution Principle in 3 Minutes;}
 \item \href {https://dl.acm.org/doi/abs/10.1145/155360.155367}{A history of CLU Barbara Liskov (1992)}
+
 \item \href{https://dblp.uni-trier.de/pid/l/BarbaraLiskov.html}{Barbara Liskov Index of publications}
 
 \item \href{http://www.pmg.csail.mit.edu/~liskov/newcv-09.pdf}{Barbara Liskov CV}
 
 \item \href{http://www.pmg.csail.mit.edu/~liskov/}{Barbara Liskov home page}
 
+\item \href{https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.9499&rep=rep1&type=pdf}{A History of CLU, Barbara Liskov 1992}
 \end{itemize}
 \end{frame}
 
