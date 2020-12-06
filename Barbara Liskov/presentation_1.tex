@@ -107,15 +107,21 @@
 \end{frame}
 
 %------------------------------------------------
+\begin{frame}
+\frametitle{Barbara Liskov Timeline}
 
+\includegraphics[scale=0.7]{timeline.jpg}
+
+    
+\end{frame}
 %------------------------------------------------
 \begin{frame}
-\frametitle{Turing Award}
-Barbara Liskov was awarded the Alan Turing award for  contributions "of lasting and major technical importance to the computer field". 
+\frametitle{Turing Award Citation}
+Barbara Liskov was awarded the Alan Turing award in 2008 for  contributions "of lasting and major technical importance to the computer field". 
 
 \vspace{5mm} %5mm vertical space
 
-Awarded for contributions to practical and theoretical foundations of programming language and system design, especially related to data abstraction, fault tolerance, and distributed computing. 
+Award for contributions to practical and theoretical foundations of programming language and system design, especially related to data abstraction, fault tolerance, and distributed computing. 
 
 \vspace{5mm}
 
@@ -124,34 +130,31 @@ Awarded for contributions to practical and theoretical foundations of programmin
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Contributions}
+\frametitle{Selected work}
 \begin{itemize}
-\item Venus \& variable scope
-\item CLU Programming Language
-\item Data Abstraction
-\item Liskov Substitution
+\item Data Abstraction.
+\item CLU Programming Language.
+\item Liskov Substitution.
+\item Distributed Systems.
+\item Practical Byzantine Fault Tolerance.
 \end{itemize}
 \end{frame}
 %------------------------------------------------
-\begin{frame}
-\frametitle{Venus \& Variable Scope}
-Created the “Venus Computer” tailored to supporting the construction of complex software. The Venus operating system was a small time sharing system for the Venus machine used to experiment with how different architectures helped or hindered this process.
 
-\vspace{5mm}
 
-The Venus Operating System is an experimental multiprogramming system which supports five or six concurrent users on a small computer. The system is defined by a combination of microprograms and software.
-
-\vspace{5mm}
-
-Variable scope
-\end{frame}
-%------------------------------------------------
 %------------------------------------------------
 \begin{frame}
 \frametitle{Data Abstraction}
-What we desire from an abstraction is a mechanism which permits the expression of relevant details and the suppression of irrelevant details. In the case of programming, the use which may be made of an abstraction is relevant; the way in which the abstraction is implemented is irrelevant. — Programming With Abstract Data Types - B.Liskov 1974
+Because  systems  of  any  size  can  al-ways  be  expected  to  be  subject  to  changes  in  require-ments,  the  project  goal  is  to  produce  not  only  reliable  software,  but  readable  software  which  is relatively  easy  to  modify  and  maintain[1].
+
+\vspace{5mm}
+
+What we desire from an abstraction is a mechanism which permits the expression of relevant details and the suppression of irrelevant details. In the case of programming, the use which may be made of an abstraction is relevant; the way in which the abstraction is implemented is irrelevant[2]. 
+
+\vspace{5mm}
 
 This work resulted in CLU a programming language which is a predecessor to many OOP languages.
+
 \vspace{5mm}
 
 Her contributions have influenced advanced system developments and set a standard for clarity and usefulness
@@ -175,7 +178,14 @@ also notable for its use of classes with constructors and methods, but without i
 
 \end{frame}
 %------------------------------------------------
+\begin{frame}{Cluster template in CLU}
 
+\includegraphics{cluster.png}
+    
+\end{frame}
+
+
+%------------------------------------------------
 \begin{frame}
 \frametitle{Barbara Liskov's definition}
 
@@ -275,8 +285,38 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 \end{frame}
 
 %------------------------------------------------
+\begin{frame}{Distributed Systems}
+In the 1980’s remote file systems came into existence. Worked on an algorithm that handled benign failures or crash failures.
+ Designed a replication technique with Brian Oki[3].
+ 
+ \vspace{2mm}
+ 
+ One of the potential benefits of distributed systems is their use in providing highly-available services, that is, services that are likely to be up and accessible when needed. Availability is essential to many computer-based services; for example, in airline reservation systems the failure of a single computer can prevent ticket sales for a considerable time, causing a loss of revenue and passenger goodwill. Availability is achieved through replication. By having more than one copy of important information, the service continues to be usable even when some copies are inaccessible, for example, because of a crash of the computer where a copy was stored[3].
+
+
+    
+\end{frame}
+%------------------------------------------------
+%------------------------------------------------
+\begin{frame}{Practical Byzantine Fault Tolerance}
+In the 1990's came up with a new replication algorithm that  is able to tolerate Byzantine faults with Miguel Castro[4].
+
+\vspace{2mm}
+
+pBFT consensus rounds are called views and are broken into 4 phases:
+
+   1. A client sends a request to the leader node to invoke a service operation.
+   2. The leading node broadcasts the request to the backup nodes.
+    3.The nodes execute the request, then send a reply to the client.
+   4. The client awaits f+1 replies from different nodes with the same result, where f represents the maximum number of potentially faulty nodes[5].
+
+\end{frame}
+%------------------------------------------------
+
+
 \begin{frame}{Conclusion}
 \begin{itemize}
+\item At 81, Barbara Liskov is still active today contributing to and writing many papers as recently as this year.
 \item Subsequent work has mainly been in the area of distributed systems. 
 \item Her research has covered many aspects of OS and computation \begin{itemize}
     \item work on object-oriented database systems
@@ -288,7 +328,7 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 \end{itemize}  
 \item Many of these, deal with situations where a complex system fails in arbitrary ways. 
 \item Liskov developed methods to allow correct operation even when some components are unreliable.
-\item At 81, Barbara Liskov is still active today contributing to and writing many papers as recently as this year.  
+ 
 
 \end{itemize}
 \end{frame}
@@ -301,7 +341,31 @@ She did not name the Liskov Substitution Principle. Apparently, she received an 
 \Huge{\centerline{The End}}
 \end{frame}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------
+\begin{frame}{References}
+
+[1] {A  design  methodology  for  reliable  software   systems, Barbara Liskov, 1972} https://ckrybus.com/static/papers/liskov1972.pdf 
+
+\vspace{1mm}
+
+[2] {Programming With Abstract Data Types - B.Liskov 1974}
+http://web.cs.iastate.edu/~hridesh/teaching/362/07/01/papers/p50-liskov.pdf
+
+\vspace{1mm}
+
+[3] {Viewstamped Replication: A New Primary Copy Method to Support Highly-Available Distributed Systems B. Liskov, B.Oki 1988}
+http://pmg.csail.mit.edu/papers/vr.pdf
+
+\vspace{1mm}
+
+[4] {PracticalByzantineFaultTolerance M.Castro, B. Liskov 1999} http://pmg.csail.mit.edu/papers/osdi99.pdf
+
+\vspace{1mm}
+
+[5] https://crushcrypto.com/what-is-practical-byzantine-fault-tolerance/
+
+\end{frame}
+%-----------------------------------------------------------------
 
 \begin{frame}
 \frametitle{Clickable References}
